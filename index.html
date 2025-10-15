@@ -174,7 +174,8 @@
         // --- Lógica de la Simulación ---
         function startSimulation() {
             const interval = setInterval(() => {
-                currentProgress += Math.floor(Math.random() * 8) + 12;
+                // Incremento de progreso ajustado para ~6s
+                currentProgress += Math.floor(Math.random() * 5) + 8;
                 
                 if (currentProgress >= 100) {
                     currentProgress = 100;
@@ -198,7 +199,7 @@
                         typeWriter(filesToDelete[fileIndex], fileIndex);
                     }
                 }
-            }, 400);
+            }, 600); // Intervalo ajustado para una duración de ~6 segundos
         }
 
         // --- Efecto Máquina de Escribir ---
@@ -263,4 +264,3 @@
 
 </body>
 </html>
-
